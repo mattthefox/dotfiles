@@ -36,13 +36,8 @@ Designed for **Wayland enthusiasts** with Hyprland, these dotfiles combine produ
 ---
 
 ## 🖼️ Screenshots
-
-<div align="center">
-  <img src="images/screenshot1.png" alt="Theme 1" width="400" style="margin:10px;">
-  <img src="images/screenshot2.png" alt="Sidebar" width="400" style="margin:10px;">
-  <img src="images/screenshot3.png" alt="Conky Widgets" width="400" style="margin:10px;">
-</div>
-
+<img src="images/screenshot1.png" alt="Theme 1" width="400" style="margin:10px;">
+<img src="images/screenshot2.png" alt="Sidebar" width="400" style="margin:10px;">
 ---
 
 ## ⚡ Installation
