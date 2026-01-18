@@ -1,0 +1,64 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: #282A36;
+  foreground: #6272A4;
+  foreground: #9893a5;
+  selected: #8BE9FD;
+  selected: #eb6f92;
+  background-color: @background;
+  text-color: @foreground;
+}
+ 
+ 
+window {
+    background-color:               @background;
+    border:                         2px;
+    border-color:                   @selected;
+    border-radius:                  25px;
+    width:                          490px;   
+    height:                         130px;          
+    x-offset:                       -4;
+    y-offset:                       0;
+}
+ 
+listview {
+    background-color:               @background;
+    columns:                        1;
+    lines:                          5;
+    spacing:                        50px;
+    layout:                         horizontal;
+}
+ 
+mainbox {
+    background-color:               @background;
+    children:                       [ listview ];
+    padding:                        40px;
+}
+ 
+element {
+    background-color:               @background;
+    text-color:                     @line;
+    orientation:                    horizontal;
+    /*border-radius:                  100%;*/
+    /*padding:                        8px 32px 8px 32px;*/
+}
+ 
+element-text {
+    background-color:               inherit;
+    text-color:                     inherit;
+    font:                           "JetBrainsMono Nerd Font 26";
+    expand:                         false;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0px;
+}
+ 
+element selected {
+    background-color:               @background;
+    text-color:                     @selected;
+    border:                         0px;
+    /*border-radius:                  100%;*/
+    border-color:                   @selected;
+}
