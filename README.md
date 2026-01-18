@@ -52,4 +52,4 @@ Designed for **Wayland enthusiasts** with Hyprland, these dotfiles combine produ
 sh -c "$(curl -fsLS get.chezmoi.io)"
 
 # Apply my dotfiles
-chezmoi init --apply <your-github-username>/<repo>
+chezmoi init --apply mattthefox/dotfiles
