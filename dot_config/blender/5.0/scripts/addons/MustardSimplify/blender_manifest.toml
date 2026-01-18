@@ -1,0 +1,20 @@
+schema_version = "1.0.0"
+
+id = "MustardSimplify"
+version = "2025.3.0"
+name = "Mustard Simplify"
+tagline = "Tool to simplify scenes for improved viewport performance"
+maintainer = "Mustard"
+type = "add-on"
+
+website = "https://github.com/Mustard2/MustardSimplify/"
+
+tags = ["Scene"]
+
+blender_version_min = "4.3.0"
+
+# License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
+# https://docs.blender.org/manual/en/dev/advanced/extensions/licenses.html
+license = [
+  "SPDX:GPL-3.0-or-later",
+]

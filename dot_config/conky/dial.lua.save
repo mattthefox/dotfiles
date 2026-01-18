@@ -1,0 +1,12 @@
+require 'cairo_xlib'
+
+function conky_draw_meters()
+	cairo_set_line_width (cr, ring_width)
+	end_angle = value * (360 / max_value)
+	print (end_angle)
+	cairo_set_source_rgba (cr, ring_in_red, ring_in_green, ring_in_blue,
+		ring_in_alpha)
+	cairo_arc (cr, ring_center_x, ring_center_y, ring_radius,(-90) *
+		(math.pi / 180), (end_angle - 90) * (math.pi / 180))
+	cairo_stroke (cr)
+end

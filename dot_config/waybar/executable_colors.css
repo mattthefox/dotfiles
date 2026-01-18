@@ -1,0 +1,17 @@
+@define-color crust rgb(0, 0, 0);
+@define-color base rgb(35, 27, 27);
+@define-color surface rgb(62, 48, 48);
+@define-color overlay rgb(86, 71, 71);
+@define-color muted rgb(146, 131, 116);
+@define-color subtle rgb(168, 153, 132);
+@define-color text rgb(53, 215, 212);
+
+@define-color red rgb(242, 64, 64);
+@define-color orange rgb(251, 92, 39);
+@define-color yellow rgb(239, 219, 36);
+@define-color green rgb(54, 214, 86);
+@define-color blue rgb(53, 215, 212);
+@define-color purple rgb(202, 112, 218);
+@define-color accent rgb(239, 219, 36);
+
+@define-color transparent rgba(0, 0, 0, 0.0);

@@ -1,0 +1,11 @@
+animatable toggles for collection.
+
+operators:
+update the custom props of the empty and create the empty if it doesnt exist. it should only be in the scene collection. It will also add a keyframe to each collection property,
+button to render the scene. goes to frame 0 of the animation, does bpy.ops.mustard_simplify.scene(enable_simplify=True) and bpy.ops.mustard_simplify.scene(enable_simplify=False) to refresh stuff, and then does a viewport render. It gets the separate renders it needs to do by checking the Empty's data, and it splits it into multiple "renders" with the respective collections disabled.
+
+
+
+a new side panel for settings related to this
+a designated empty object in every scene. stores custom properties that are formatted like
+<COLLECTIONNAME>_<BLENDER COLLECTION UUID>

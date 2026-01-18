@@ -1,0 +1,214 @@
+@define-color crust rgb(25, 26, 31);
+@define-color base rgb(40, 42, 54);
+@define-color surface rgb(68, 71, 90);
+@define-color overlay rgb(98, 114, 164);
+@define-color muted rgb(98, 114, 164);
+@define-color subtle rgb(98, 114, 164);
+@define-color text rgb(248, 248, 242);
+
+@define-color red rgb(255, 85, 85);
+@define-color orange rgb(255, 184, 108);
+@define-color yellow rgb(241, 250, 140);
+@define-color green rgb(80, 250, 123);
+@define-color blue rgb(139, 233, 253);
+@define-color purple rgb(189, 147, 249);
+@define-color accent rgb(139, 233, 253);
+@define-color accent_fg rgb(223, 221, 190);
+
+@define-color transparent rgba(0, 0, 0, 0.0);
+
+* {
+  border: none;
+  border-radius: 10px;
+  min-height: 0;
+  font-family: FantasqueSansM Nerd Font Propo;
+  font-size: 16px;
+}
+
+window#waybar {
+  border-radius: 10px;
+  background-color: alpha(@crust, 0);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces {
+  padding: 5px;
+  background-color: @crust;
+  border-radius: 0px 0px 15px 0px;
+}
+
+#workspaces button {
+  all: initial;
+  /* Remove GTK theme values (waybar #1351) */
+  min-width: 0;
+  /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent;
+  border: 2px solid @surface;
+  /* Use box-shadow instead of border so the text isn't offset */
+  padding: 10px;
+  margin: 0px 3px;
+  border-radius: 30px;
+  background-color: @base;
+  transition-property: background-color, color, border-color, box-shadow, padding-left, padding-right;
+  transition-duration: 0.25s;
+  color: @text;
+}
+
+span {
+  color: @base;
+}
+
+#workspaces button:hover {
+  /*box-shadow: inset 0 0 0 2px @accent; */
+  border-color: @accent;
+  color: @accent;
+}
+
+#workspaces button.active {
+  border-color: @accent;
+  background-color: @accent;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: @accent_fg;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+}
+
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#wireplumber,
+#network,
+#clock,
+#custom-gpu,
+#custom-zewm,
+#custom-cpu_temp,
+#cpu,
+#tray {
+  margin: 6px 4px;
+  padding: 2px 12px;
+  background-size: 100% 100%;
+  color: @text;
+  border: 2px solid @crust;
+  border-radius: 20px;
+}
+
+#custom-line_break {
+  color: @muted;
+  font-size: 30px;
+  margin: 0px 10px 0px 0px;
+}
+
+#custom-next_song,
+#custom-prev_song,
+#custom-pause_song,
+#custom-next_wallpaper,
+#custom-current_wallpaper,
+#custom-prev_wallpaper {
+  background-color: @base;
+  border: 2px @surface solid;
+  padding: 6px;
+  margin: 2px;
+  
+  transition: all 0.2s;
+  border-radius: 16px;
+}
+
+#custom-next_wallpaper:hover,
+#custom-current_wallpaper:hover,
+#custom-prev_wallpaper:hover {
+  background-color: @surface;
+  border: 2px @overlay solid;
+}
+
+#dynamic-island {
+  background-color: @crust;
+  margin-top: 4px;
+  padding: 0px 10px 0px 10px;
+  border: 0px solid @base;
+  transition: padding 0.2s;
+  border-radius: 20px;
+}
+
+#dynamic-island:hover {
+  border: 1px solid @base;
+  padding: 0px 30px 0px 30px;
+}
+#pulseaudio-slider {
+  padding: 20px;
+  margin: 2px;
+}
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-color: @text;
+  border: none;
+  box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 150px;
+  border-radius: 5px;
+  background-color: @base;
+}
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @red;
+}
+#volume-label {
+  color: white;
+}
+
+#image {
+  color: @text;
+  border-radius: 0px;
+  transition: border 0.3s ease; /* smooth animation */
+}
+
+#custom-power {
+  margin-right: 6px;
+}
+
+#custom-zewm {
+  background-image: url('/tmp/zewm_album_art.jpeg');
+  border-radius: 0px;
+}
+
+#custom-logo {
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: 5px;
+  font-size: 15px;
+  color: @blue;
+}
+
+#memory,
+#custom-gpu,
+#custom-cpu_temp,
+#cpu,
+#clock,
+#network,
+#custom-power {
+  background-color: @base;
+}
+
+
+tooltip {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: @crust;
+}
+
+tooltip label {
+  padding: 5px;
+}
