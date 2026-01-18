@@ -1,0 +1,131 @@
+* {
+	bg-col: #2e3440CC;
+    clear: rgba(0,0,0,0%);
+	bg-col-light: #d8dee9;
+	border-col: #434c5e;
+	selected-col: #88c0d0;
+	blue: #88c0d0;
+	muted: #4c566a;
+	text: #eceff4;
+    grey: #6c7086;
+	crust: #181b20;
+
+    width: 700;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 500px;
+    border: 3px;
+    border-color: @crust;
+    background-color: @bg-col;
+    border-radius: 30px;
+}
+
+mainbox {
+    background-color: @clear;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @clear;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @blue;
+    padding: 15px 26px 15px 20px;
+    text-color: @bg-col;
+    border-radius: 15px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 10px;
+    margin: 20px 15px 0px 15px;
+    text-color: @text;
+    border-radius: 15px;
+    border: 2px;
+    border-color: @muted;
+    background-color: @bg-col;
+}
+
+listview {
+    columns: 5;
+    lines: 4;
+    spacing: 10px;
+    background-color: @clear;
+}
+
+element-text {
+    font: "JetBrainsMono Nerd Font 10";
+    horizontal-align: 0.5; /* center label */
+    vertical-align: 1.0;   /* label below icon */
+    margin: 0px 0px 0px 0px;
+}
+
+element {
+    padding: 0px;
+    margin: 5px;
+    width: 100px;         /* square size */
+    height: 100px;
+    background-color: @clear;
+    text-color: @text;
+    vertical-align: 0.5;   /* center content vertically */
+    horizontal-align: 0.5; /* center content horizontally */
+    orientation: vertical; /* arrange icon and label vertically */
+}
+
+element-icon {
+    size: 48px;            /* icon size */
+    horizontal-align: 0.5;
+    vertical-align: 0.5;   /* icon at the top */
+}
+
+element selected {
+    border-radius: 10px;
+    background-color: @clear;
+    text-color: @selected-col;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @clear;
+  text-color: @blue;
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
+}
